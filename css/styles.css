@@ -102,7 +102,24 @@ button {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--secondary-accent-color);
+    margin-bottom: 24px;
 
+}
+
+.current {
+    color: var(--active-color);
+    position: relative;
+}
+
+.current::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -27px;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--active-color);
 }
 
 /* ==========HEADER========== */
@@ -158,8 +175,7 @@ button {
 .menu-link:hover,
 .menu-link:active,
 .menu-link:focus {
-    color: var(--secondary-accent-color);
-
+    color: var(--active-color);
 }
 
 /* ==========CONTACTS========== */
@@ -179,7 +195,7 @@ button {
 .contacts-link:hover,
 .contacts-link:active,
 .contacts-link:focus {
-    color: var(--secondary-accent-color);
+    color: var(--active-color);
 }
 
 /* ==========HERO========== */
@@ -219,7 +235,7 @@ button {
     border-radius: 4px;
     padding: 16px 32px;
     border: none;
-    transition: color var(--transition-durat-and-funct);
+    transition: background-color var(--transition-durat-and-funct);
 }
 
 .hero-btn:hover,
@@ -325,7 +341,7 @@ button {
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    transition: color var(--transition-durat-and-funct);
+    transition: background-color var(--transition-durat-and-funct);
 }
 
 .team-soc-link:is(:hover, :focus, :active) {
@@ -364,7 +380,7 @@ button {
     justify-content: center;
     align-items: center;
     color: var(--helper-color);
-    transition: color var(--transition-durat-and-funct);
+    transition: color var(--transition-durat-and-funct), border var(--transition-durat-and-funct);
 }
 
 .customer-icon {
@@ -442,7 +458,7 @@ button {
     border-radius: 50%;
     justify-content: center;
     align-items: center;
-    transition: color var(--transition-durat-and-funct);
+    transition: background-color var(--transition-durat-and-funct);
 }
 
 .footer-icon {
@@ -502,8 +518,12 @@ button {
     position: absolute;
     top: 24px;
     right: 24px;
+    transition: background-color var(--transition-durat-and-funct);
+}
 
-
+.modal-close-btn:is(:hover, :focus) {
+    fill: var(--primary-color);
+    background-color: var(--active-color);
 }
 
 
@@ -530,7 +550,11 @@ button {
     border-radius: 4px;
     border: 1px solid var(--primary-accent-color);
     padding: 12px 24px;
-    transition: color var(--transition-durat-and-funct);
+    transition: 
+    background-color var(--transition-durat-and-funct), 
+    color var(--transition-durat-and-funct), 
+    box-shadow var(--transition-durat-and-funct),
+    border var(--transition-durat-and-funct);
 }
 
 .filter-btn:hover,
@@ -563,11 +587,10 @@ button {
     display: block;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);
     border-left: 1px solid var(--primary-accent-color);
-    transition: color var(--transition-durat-and-funct);
-    
+    transition: box-shadow var(--transition-durat-and-funct);
 }
 
-.section-link:is(:hover, :focus) .overlay{
+.section-link:is(:hover, :focus) .overlay {
     transform: translate(0, 0);
 }
 
