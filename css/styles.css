@@ -115,7 +115,7 @@ button {
     content: '';
     position: absolute;
     left: 0;
-    bottom: -27px;
+    bottom: -28px;
     width: 100%;
     height: 4px;
     border-radius: 2px;
@@ -554,7 +554,6 @@ button {
     background-color var(--transition-durat-and-funct), 
     color var(--transition-durat-and-funct), 
     box-shadow var(--transition-durat-and-funct),
-    border var(--transition-durat-and-funct);
 }
 
 .filter-btn:hover,
@@ -566,7 +565,6 @@ button {
     0px 3px 1px rgba(0, 0, 0, 0.1), 
     0px 2px 1px rgba(0, 0, 0, 0.08), 
     0px 2px 2px rgba(0, 0, 0, 0.12);
-    border: none;
 }
 
 /* ========== SECTION ========== */
